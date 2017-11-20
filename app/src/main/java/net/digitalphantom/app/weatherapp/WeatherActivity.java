@@ -1,4 +1,7 @@
 /**
+ *
+ * Modified by Karl Elmore. Add functionality of a second city.
+ *
  * The MIT License (MIT)
  *
  * Copyright (c) 2015 Yoel Nunez <dev@nunez.guru>
@@ -43,6 +46,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -286,5 +290,12 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     @Override
     public void onProviderDisabled(String s) {
         // OPTIONAL: implement your custom logic here
+    }
+    public void switch_city(View view){
+
+        Intent switchToSecondCity = new  Intent();
+        switchToSecondCity.setClass(this, SecondActivity.class);
+        startActivity(switchToSecondCity);
+
     }
 }

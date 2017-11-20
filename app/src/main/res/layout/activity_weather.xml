@@ -1,4 +1,7 @@
 <!--
+
+Modified by Karl Elmore. Add functionality of a second city.
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Yoel Nunez <dev@nunez.guru>
@@ -31,8 +34,8 @@ THE SOFTWARE.
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:id="@+id/weatherIconImageView"
-        android:layout_alignParentTop="true"
         android:src="@drawable/icon_na"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/condition_icon" />
@@ -86,41 +89,58 @@ THE SOFTWARE.
         android:layout_marginTop="34dp"
         android:layout_above="@+id/imageView"
         android:baselineAligned="false">
+
         <fragment
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
             android:id="@+id/forecast_0"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_weather_condition" />
-        <fragment
+            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+
+        <fragment
             android:id="@+id/forecast_1"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_weather_condition" />
-        <fragment
+            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+
+        <fragment
             android:id="@+id/forecast_2"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_weather_condition" />
-        <fragment
+            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+
+
+        <fragment
             android:id="@+id/forecast_3"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_weather_condition" />
-        <fragment
+            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_weather_condition" />
+
+        <fragment
             android:id="@+id/forecast_4"
+            android:name="net.digitalphantom.app.weatherapp.fragments.WeatherConditionFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:layout="@layout/fragment_weather_condition" />
     </LinearLayout>
 
-</RelativeLayout>
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="switch_city"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/imageView"
+        android:text="Switch to Second City" />
+
+  </RelativeLayout>
